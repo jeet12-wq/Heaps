@@ -58,11 +58,6 @@ class Heap
     }
 };
 
-
-
-
-
-
 int main()
 {
     Heap pq(10);
