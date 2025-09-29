@@ -10,7 +10,7 @@ class Heap
     public:
     Heap(int n)
     {
-        this->capacity = capacity;
+        this->capacity = n;
         arr = new int[n];
         index = 0;
     }
@@ -60,14 +60,24 @@ void buildHeap(int* arr, int n) {
 	}
 }
 
+void HeapSort(int *arr,int n)
+{
+    //n->size
+    while(n!=1)
+    {
+        swap(arr[1],arr[n-1]);  //n-1 = last element ka index hai
+        n--;  //delete the index
+        heapify(arr,n,1); //1 index wala ke saath heapify kardo!
+    }
+}
+
 
    
 
 
 int main()
 {
-    Heap pq(10);
-    int arr[] = {-1, 10,20,30,40,50};
+   int arr[] = {-1, 10,20,30,40,50};
 	int n = 6;
 
 	buildHeap(arr, n);
@@ -76,5 +86,14 @@ int main()
 		cout << arr[i] << " ";
 	}
 	cout << endl;
+
+	HeapSort(arr, n);
+
+	cout<<endl << "Printing heap" << endl;
+	for(int i=1; i<n; i++) {
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+    
 
 }
