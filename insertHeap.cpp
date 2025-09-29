@@ -71,6 +71,8 @@ int main()
     pq.printHeap();
      pq.insert(50);
     pq.printHeap();
+
+    
     
 
 }

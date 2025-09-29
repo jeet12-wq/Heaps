@@ -55,7 +55,7 @@ public:
 		//size decrease
 		index--;
 		//heapify
-		//heapify(arr, index, 1);
+		heapify(arr, index, 1);
 	}
 };
 //heapify value present at currIndex
