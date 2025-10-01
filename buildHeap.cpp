@@ -37,7 +37,7 @@ class Heap
 	//check for Right
 	if(rightIndex < n && arr[rightIndex] > arr[largestKaIndex]) {
 		//right me badi value mil gyi
-		largestKaIndex = rightIndex;
+		largestKaIndex = rightIndex;     //!updated largestkaIndex hai jo upr leftIndex se aaya hai
 	}
 	//jab yaha aaoge, tb tumhare paas, sabse bade value ka index hoga 
 
@@ -62,7 +62,7 @@ void buildHeap(int* arr, int n) {
 
 void HeapSort(int *arr,int n)
 {
-    //n->size
+    //n->size of the array hai
     while(n!=1)
     {
         swap(arr[1],arr[n-1]);  //n-1 = last element ka index hai

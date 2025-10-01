@@ -56,9 +56,9 @@ public:
         // 1st step-swap
         swap(arr[1], arr[index]);
 
-        index--;
+        index--;  //dont consider the last element
 
-        heapify(arr, index, 1);
+        heapify(arr, index, 1);   //aaur wo node ko propogate kro upr
     }
 
     void heapify(int *arr, int n, int currIndex)
@@ -80,8 +80,9 @@ public:
         {
             largestkaindex = rightIndex;
         }
-
-        if (largestkaindex != i)
+        
+        ///swap wala logic 
+        if (largestkaindex != i)  //agar largest index jo tumne mana hai agar wo nhi hai then swap karo
         {
             swap(arr[i], arr[largestkaindex]);
             i = largestkaindex;

@@ -4,8 +4,8 @@ using namespace std;
 class Heap
 {
     int *arr;
-    int capacity;
-    int index;
+    int capacity;  //arr ka size hai
+    int index;    //no of inserted elements
 
    
     public:
@@ -30,7 +30,7 @@ class Heap
     void insert(int val)
     {
         //already heap full
-        if(index == capacity-1)
+        if(index == capacity-1)  //!  6==5 false
         {
             cout<<"overflow"<<endl;
             return;
@@ -40,7 +40,7 @@ class Heap
             arr[index] = val;
             int i = index;
 
-            while(i>1)
+            while(i>1) //except for 1 uske baad pura chalega
             {
                 int parentIndex = i/2;
                 if(arr[parentIndex]<arr[i])
