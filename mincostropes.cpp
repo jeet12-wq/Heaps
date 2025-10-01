@@ -11,7 +11,7 @@ public:
 
         int cost = 0;
 
-        // Keep combining until only one element remains
+        // Keep combining until only one element remains okayyy
         while (pq.size() > 1) {
             int first = pq.top(); 
             pq.pop();
