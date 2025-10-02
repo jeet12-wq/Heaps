@@ -3,14 +3,14 @@ class Solution {
     bool checkCompleteness(Node* root) {
         queue<Node*> q;
         q.push(root);
-        bool nullFound = false;
+        bool nullFound = false;  //initial state maintain kia
 
         while(!q.empty() ) {
             Node* front = q.front();
             q.pop();
 
             if(front == NULL) {
-                nullFound = true;
+                nullFound = true; //update the nullFound
             }
             else {
                 //front ek valid node h 
@@ -27,7 +27,7 @@ class Solution {
         }
         return true;
     }
-    bool checkMaxProperty(Node* root) {
+    bool checkMaxProperty(Node* root) {   //min heap ki property that is root<left-data and right-dat
         if(root == NULL) {
             return true;
         }
