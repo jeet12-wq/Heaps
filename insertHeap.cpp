@@ -30,7 +30,7 @@ class Heap
     void insert(int val)
     {
         //already heap full
-        if(index == capacity-1)  //!  6==5 false
+        if(index == capacity-1)  //!  5==5 false
         {
             cout<<"overflow"<<endl;
             return;
